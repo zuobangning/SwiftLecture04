@@ -9,12 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var lbName: UILabel!
+    @IBOutlet weak var btnConfirm: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
 
+    
+    
+    @IBAction func btnConfirmCliker(_ sender: Any) {
+        lbName.text = "zuobangning"
+    }
+    
+    
 }
 
