@@ -15,6 +15,41 @@ class ViewController: UIViewController {
     //@IBOutlet weak var btnConfirm: UIButton!
     
     
+    @IBOutlet weak var UISwitch: UISwitch!
+    
+    @IBOutlet weak var UISlider: UISlider!
+    
+    @IBOutlet weak var UIStepper: UIStepper!
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func switchChanged(_ sender: Any) {
+        print("\(UISwitch.isOn)")
+        print("\(UISwitch.hashValue)")
+        
+    }
+    
+    @IBAction func touchesEnded(_ sender: Any) {
+        print("\(UISlider.value)")
+        
+    }
+    
+    @IBAction func stepperchanged(_ sender: Any) {
+        print("\(UIStepper.value)")
+        
+       
+        UISlider.value = Float(UIStepper.value)+Float(UISlider.value)
+        
+         print("\(UISlider.value)")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +65,16 @@ class ViewController: UIViewController {
         button.setTitle("ok", for: UIControl.State.normal)
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

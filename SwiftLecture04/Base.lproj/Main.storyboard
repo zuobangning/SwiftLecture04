@@ -39,6 +39,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ce-eU-S9h">
+                                <rect key="frame" x="205" y="348" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lqv-ij-aQk">
+                                <rect key="frame" x="32" y="407" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="touchesEnded:" destination="BYZ-38-t0r" eventType="valueChanged" id="3wD-QL-lFh"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="96g-Cx-mU5">
+                                <rect key="frame" x="252" y="483" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperchanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="I4k-XH-gsx"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -49,6 +67,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="UISlider" destination="Lqv-ij-aQk" id="YWE-Sf-FNF"/>
+                        <outlet property="UIStepper" destination="96g-Cx-mU5" id="kR1-RI-t3f"/>
+                        <outlet property="UISwitch" destination="5ce-eU-S9h" id="vUt-Gv-LvB"/>
                         <outlet property="lbName" destination="tj3-kt-kQ4" id="EhX-cS-jqq"/>
                         <outlet property="touchView" destination="SS4-LB-OJR" id="6qX-rH-nAz"/>
                     </connections>
