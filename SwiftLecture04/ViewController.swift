@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var touchView: UIView!
     @IBOutlet weak var lbName: UILabel!
     //@IBOutlet weak var btnConfirm: UIButton!
     
@@ -31,5 +32,34 @@ class ViewController: UIViewController {
     }
     
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesbega")
+      if let touch=touches.first{
+          let loc=touch.location(in:self.touchView)
+          print("\(loc)")
+          if(self.touchView.bounds.contains(loc)){
+              self.touchView.backgroundColor = UIColor.red
+           }else{
+               self.touchView.backgroundColor=UIColor.green
+           }
+       }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("abcdeeee")
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
+
+
+
+
 
